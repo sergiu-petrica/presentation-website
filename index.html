@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sergiu — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Space+Mono:wght@400;700&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SPLASH -->
+<div class="splash">
+    <canvas id="boids-canvas"></canvas>
+    <p class="greeting" data-boid-avoid>Hello, I'm</p>
+    <h1 data-boid-avoid>
+        Sergiu
+        <br/>
+        <span class="highlight">Full-Stack Engineer</span>
+    </h1>
+    <p class="tagline" data-boid-avoid>
+        10+ years designing, building, and scaling web applications.
+        From architecture to delivery.
+    </p>
+    <a href="#about" class="discover" data-boid-avoid>Discover more</a>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="section-label">About</div>
+    <p class="about-text">
+        A Full-Stack Engineer with 10+ years of experience across a wide range
+        of industries. I take <strong>full ownership of projects</strong> — from
+        architecture to delivery — and integrate seamlessly into existing teams
+        as a <strong>reliable, self-sufficient contributor</strong>.
+    </p>
+</section>
+
+<!-- WORK -->
+<section>
+    <div class="section-label">Experience</div>
+    <div class="work-list">
+
+        <div class="work-item">
+            <div>
+                <h3>Streamec</h3>
+                <div class="role">Lead Full-Stack Engineer</div>
+                <p class="desc">
+                    A Swedish music-tech company delivering licensed, gym-optimized audio
+                    streaming solutions to fitness facilities across Europe. Their core
+                    product is a subscription-based platform combining Raspberry Pi hardware
+                    with a web dashboard, which enables gym owners to manage and schedule
+                    their in-venue music experience seamlessly.
+                </p>
+                <p class="desc">
+                    Led a team of 3 on end-to-end development of the dashboard and backend
+                    services. Architected the audio processing pipeline on embedded hardware.
+                    Owned engineering processes from architecture decisions to cross-functional
+                    collaboration with music rights and operations teams.
+                </p>
+                <div class="tags">
+                    <span class="tag">PHP</span>
+                    <span class="tag">Laravel</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">VueJS</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">Docker</span>
+                </div>
+            </div>
+            <div>
+                <div class="dates">Nov 2024 — Present</div>
+                <div class="duration" data-start="2024-11"></div>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <div>
+                <h3>Nordhealth</h3>
+                <div class="role">Senior Full-Stack Engineer</div>
+                <p class="desc">
+                    A Nordic healthcare company delivering a large-scale patient management
+                    platform which serves a high volume of users across sensitive clinical
+                    workflows. The project demanded rigorous engineering standards across a
+                    complex, feature-rich application with extensive third-party integrations
+                    and strict data privacy requirements.
+                </p>
+                <p class="desc">
+                    Integrated governmental and healthcare third-party services including
+                    national patient apps and clinical communication systems. Drove the
+                    desktop-to-web migration and improved platform scalability through
+                    targeted refactoring and performance optimizations.
+                </p>
+                <div class="tags">
+                    <span class="tag">PHP</span>
+                    <span class="tag">Laravel</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">VueJS</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">Docker</span>
+                </div>
+            </div>
+            <div>
+                <div class="dates">May 2024 — Nov 2024</div>
+                <div class="duration">7 months</div>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <div>
+                <h3>MenuLabs</h3>
+                <div class="role">Senior Full-Stack Engineer</div>
+                <p class="desc">
+                    An American startup operating in the restaurant management space,
+                    delivering a multi-sided platform spanning inventory and menu management,
+                    customer-facing ordering, and real-time order fulfillment. The product
+                    required deep integration work across a wide range of external services
+                    within a rapidly evolving codebase.
+                </p>
+                <p class="desc">
+                    Served as the de facto integration specialist, owning all major third-party
+                    services — payment gateways, external POS systems, and SMS/voice
+                    communications. Evolved the application architecture as the product scaled,
+                    and delivered high-impact features across all three platform surfaces.
+                </p>
+                <div class="tags">
+                    <span class="tag">PHP</span>
+                    <span class="tag">Laravel</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">VueJS</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">Docker</span>
+                </div>
+            </div>
+            <div>
+                <div class="dates">Mar 2021 — Feb 2024</div>
+                <div class="duration">3 years</div>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <div>
+                <h3>Massachusetts Technology Innovation</h3>
+                <div class="role">Senior / Lead Full-Stack Engineer</div>
+                <p class="desc">
+                    An American pharma-tech startup focused on streamlining the creation and
+                    management of regulatory documentation for medicines and pharmaceutical
+                    equipment. The platform combined a sophisticated in-browser PDF editor —
+                    featuring digital signatures and complex document manipulation — with a
+                    configurable workflow engine, all built to comply with FDA data integrity
+                    and audit trail requirements.
+                </p>
+                <p class="desc">
+                    Led the core development effort across the workflow engine and PDF editor.
+                    Designed for compliance and scale, structuring the application into
+                    microservices with FDA-aligned versioning and security requirements.
+                    Improved developer experience through targeted refactoring of critical
+                    application layers.
+                </p>
+                <div class="tags">
+                    <span class="tag">PHP</span>
+                    <span class="tag">Laravel</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">VueJS</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">AWS</span>
+                </div>
+            </div>
+            <div>
+                <div class="dates">Jun 2020 — Mar 2021</div>
+                <div class="duration">10 months</div>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <div>
+                <h3>Advisr</h3>
+                <div class="role">Senior / Lead Full-Stack Engineer</div>
+                <p class="desc">
+                    An Australian insurance brokerage seeking to modernize their platform away
+                    from a heavily customized, legacy WordPress codebase that had become a
+                    bottleneck for further development. We delivered a purpose-built replacement
+                    with a flexible architecture within a short timeframe, encompassing broker
+                    profile management dashboards and a customer-facing broker review and
+                    rating system.
+                </p>
+                <p class="desc">
+                    Led the full platform rewrite, providing architectural direction and
+                    hands-on implementation guidance throughout the migration. Designed a
+                    flexible, extensible architecture capable of supporting the client's
+                    long-term customization roadmap.
+                </p>
+                <div class="tags">
+                    <span class="tag">PHP</span>
+                    <span class="tag">Laravel</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">jQuery</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">Docker</span>
+                </div>
+            </div>
+            <div>
+                <div class="dates">Jan 2020 — May 2020</div>
+                <div class="duration">5 months</div>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <div>
+                <h3>The Web Room</h3>
+                <div class="role">Backend Engineer</div>
+                <p class="desc">
+                    A Romanian travel-tech startup building an aggregation platform that
+                    consolidates vacation and accommodation data from multiple third-party
+                    sources into a unified, client-facing API. The core engineering challenge
+                    lay in integrating heterogeneous data sources, normalizing their output,
+                    and exposing it in a clean, consistent interface for downstream clients.
+                </p>
+                <p class="desc">
+                    Owned the full suite of data source integrations, handling ingestion and
+                    normalization across multiple external providers. Designed and refined the
+                    client-facing API layer, ensuring aggregated data was served in a logical,
+                    consistent, and scalable manner.
+                </p>
+                <div class="tags">
+                    <span class="tag">PHP</span>
+                    <span class="tag">Laravel</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">AWS</span>
+                    <span class="tag">Docker</span>
+                </div>
+            </div>
+            <div>
+                <div class="dates">Apr 2019 — Dec 2019</div>
+                <div class="duration">9 months</div>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <div>
+                <h3>AirTreks</h3>
+                <div class="role">Full-Stack Engineer</div>
+                <p class="desc">
+                    An American air travel company operating a suite of interconnected APIs
+                    and customer-facing applications for flight aggregation and booking. The
+                    platform consolidated flight and ticket data from multiple external sources,
+                    exposing it through consumer applications covering core travel workflows
+                    including flight search, booking, ticket generation, and contract management.
+                </p>
+                <p class="desc">
+                    Delivered new features across the full application stack, contributing to
+                    both the aggregation APIs and the customer-facing booking experience.
+                    Improved and optimized existing API functionality, enhancing the reliability
+                    and consistency of flight and ticket data flowing through the platform.
+                </p>
+                <div class="tags">
+                    <span class="tag">PHP</span>
+                    <span class="tag">Laravel</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">jQuery</span>
+                    <span class="tag">MySQL</span>
+                </div>
+            </div>
+            <div>
+                <div class="dates">Feb 2018 — Dec 2018</div>
+                <div class="duration">11 months</div>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <div>
+                <h3>Target-E Digital</h3>
+                <div class="role">Full-Stack Engineer</div>
+                <p class="desc">
+                    A Romanian digital agency delivering a broad portfolio of web projects,
+                    from presentation websites to complex automotive dealership platforms with
+                    contract generation and documentation management. Worked in close
+                    collaboration with a German sister company on marketing-integrated
+                    solutions, with frequent direct client engagement throughout the delivery
+                    process.
+                </p>
+                <p class="desc">
+                    Contributed across a diverse project portfolio, implementing new features
+                    and improving existing solutions. Ensured long-term project health through
+                    ongoing maintenance and bugfixes. Acted as a direct client liaison,
+                    handling requirements gathering and technical consultancy.
+                </p>
+                <div class="tags">
+                    <span class="tag">PHP</span>
+                    <span class="tag">TYPO3 CMS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">jQuery</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">Vagrant</span>
+                </div>
+            </div>
+            <div>
+                <div class="dates">Jun 2016 — Feb 2018</div>
+                <div class="duration">1 year 9 months</div>
+            </div>
+        </div>
+
+        <div class="work-item">
+            <div>
+                <h3>Freshbyte</h3>
+                <div class="role">Full-Stack Engineer</div>
+                <p class="desc">
+                    A Romanian development studio where I began my professional career,
+                    working on a CRM platform for a real estate agency. The application
+                    covered core real estate workflows including property evaluation
+                    management and contract generation. Over time I progressively took
+                    ownership of the project, eventually becoming the sole engineer
+                    responsible for its development and maintenance.
+                </p>
+                <p class="desc">
+                    Delivered bugfixes and iterative improvements across the platform, with a
+                    particular focus on the contract generation workflow. Grew into full
+                    ownership of the project, transitioning from a supported junior role to
+                    sole engineer.
+                </p>
+                <div class="tags">
+                    <span class="tag">PHP</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">jQuery</span>
+                    <span class="tag">MySQL</span>
+                </div>
+            </div>
+            <div>
+                <div class="dates">Jun 2014 — Oct 2015</div>
+                <div class="duration">1 year 5 months</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+    <div class="section-label">Projects</div>
+    <div class="projects-grid">
+
+        <div class="project-card" data-action="none">
+            <div class="project-number">01</div>
+            <h3>Achievement Tracker</h3>
+            <p class="desc">
+                A social media app focused on bringing positivity to online
+                interactions — users share and celebrate personal achievements
+                rather than curated highlights. Intentionally built in an
+                unfamiliar stack as a learning exercise. In development.
+            </p>
+            <div class="tags">
+                <span class="tag">C#</span>
+                <span class="tag">.NET</span>
+            </div>
+        </div>
+
+        <div class="project-card" data-action="link" data-href="https://github.com/sergiu-petrica/presentation-website">
+            <div class="project-number">02</div>
+            <h3>This Website</h3>
+            <p class="desc">
+                A personal portfolio built from scratch with no frameworks — just
+                HTML, CSS, and vanilla JavaScript. Features a boids flocking
+                simulation with pixel-art animated sprites that avoid both the
+                cursor and the page content.
+            </p>
+            <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Canvas</span>
+            </div>
+        </div>
+
+        <div class="project-card" data-action="link" data-href="https://dianatodean.ro">
+            <div class="project-number">03</div>
+            <h3><a href="https://dianatodean.ro" target="_blank" rel="noopener">Psychotherapy Website</a></h3>
+            <p class="desc">
+                A presentation website for a psychotherapist, featuring a clean layout
+                designed to build trust with potential clients and a contact form
+                for appointment inquiries.
+            </p>
+            <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="copy">&copy; 2026 Sergiu-Lucian Petrică</div>
+    <div class="links">
+        <a href="https://github.com/sergiu-petrica" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/sergiu-lucian-petric%C4%83-4b2265a7/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:sergiu.petrica91@gmail.com">Email</a>
+        <a href="sergiu-cv.pdf" target="_blank" rel="noopener">CV</a>
+    </div>
+</footer>
+
+<script src="main.js"></script>
+<script src="boids.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #f0ece2;
+    --fg: #0a0a0a;
+    --accent: #0a0a0a;
+    --accent2: #991b1b;
+    --muted: #666;
+    --card-bg: #e8e4da;
+    --card-border: #d0ccc2;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    overflow-x: hidden;
+}
+
+/* ---- SPLASH ---- */
+.splash {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10vw;
+    position: relative;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.splash > *:not(#boids-canvas):not(.discover) {
+    pointer-events: none;
+}
+
+.splash .greeting {
+    font-family: 'Space Mono', monospace;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    color: var(--accent);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.splash h1 {
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+}
+
+.splash h1 .highlight {
+    color: var(--accent2);
+    position: relative;
+    display: inline-block;
+}
+
+.splash h1 .highlight::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0.05em;
+    width: 100%;
+    height: 0.08em;
+    background: var(--accent2);
+    opacity: 0.3;
+    border-radius: 2px;
+}
+
+.splash .tagline {
+    margin-top: 2rem;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    color: var(--muted);
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+.discover {
+    position: absolute;
+    bottom: 3rem;
+    left: 10vw;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    pointer-events: auto;
+    transition: color 0.3s;
+}
+
+.discover::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--muted);
+    transition: background 0.3s, width 0.3s;
+}
+
+.discover:hover {
+    color: var(--accent);
+}
+
+.discover:hover::before {
+    background: var(--accent);
+    width: 60px;
+}
+
+/* ---- BOIDS CANVAS ---- */
+#boids-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ---- SECTIONS ---- */
+section {
+    padding: 8rem 10vw;
+}
+
+.section-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--accent);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--card-border);
+}
+
+/* ---- ABOUT ---- */
+.about-text {
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+    line-height: 1.6;
+    max-width: 750px;
+    font-weight: 400;
+}
+
+.about-text strong {
+    color: var(--accent2);
+    font-weight: 600;
+}
+
+/* ---- WORK ---- */
+.work-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.work-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 2rem;
+    padding: 2rem;
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    background: var(--card-bg);
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.work-item:hover {
+    border-color: var(--accent2);
+    transform: translateX(6px);
+}
+
+.work-item h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.work-item .role {
+    color: var(--accent2);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.work-item .desc {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.work-item .desc + .desc {
+    margin-top: 0.75rem;
+}
+
+.work-item .dates {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--muted);
+    white-space: nowrap;
+}
+
+.work-item .duration {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--muted);
+    opacity: 0.7;
+    margin-top: 0.25rem;
+}
+
+/* ---- PROJECTS ---- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 2rem;
+    background: var(--card-bg);
+    transition: border-color 0.3s, transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.project-card[data-action="none"] {
+    cursor: default;
+}
+
+.project-card:hover {
+    border-color: var(--accent2);
+    transform: translateY(-4px);
+}
+
+.project-card .project-number {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.project-card h3 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.project-card:hover h3 a {
+    color: var(--accent2);
+}
+
+.project-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.project-card .desc {
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    flex: 1;
+}
+
+.tags {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--accent2);
+    border: 1px solid var(--accent2);
+    border-radius: 999px;
+    padding: 0.25rem 0.75rem;
+    opacity: 0.7;
+}
+
+/* ---- FOOTER ---- */
+footer {
+    padding: 4rem 10vw;
+    border-top: 1px solid var(--card-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+footer .copy {
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+footer .links {
+    display: flex;
+    gap: 2rem;
+}
+
+footer .links a {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--fg);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+}
+
+footer .links a:hover {
+    color: var(--accent);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 600px) {
+    section {
+        padding: 5rem 7vw;
+    }
+
+    .splash {
+        padding: 0 7vw;
+    }
+
+    .work-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .work-item .dates {
+        order: -1;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
